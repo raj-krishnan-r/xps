@@ -108,6 +108,11 @@ std::vector<std::string> explode(const std::string& str, const char& ch) {
         SDL_RenderPresent(renderer);
         */
     }
+    void mouseHead(int x,int y){
+        /*
+        Draws a circle around the mouse, calculate the matrix and paint it.
+        */
+    }
 
 private:
     int height;     // Height of the window
@@ -130,6 +135,11 @@ int main(int argc, char * argv[]){
     //  corner.
     while(!(event.type == SDL_QUIT)){
         SDL_Delay(10);  // setting some Delay
-        SDL_PollEvent(&event);  // Catching the poll event.
+          // Catching the poll event.
+        while(SDL_PollEvent(&event))
+        if(event.type == SDL_MOUSEMOTION){
+            mouseHead(event.motion.x,event.motion.y);
+        }
     }
+    
 }
