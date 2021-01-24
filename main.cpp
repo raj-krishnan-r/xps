@@ -71,7 +71,7 @@ std::vector<std::string> explode(const std::string& str, const char& ch) {
                     int r = 0;
                     red >> r;
                     int g = 0;
-                    red >> g;
+                    green >> g;
                     int b = 0;
                     blue >> b;
                     int a = 0;
